@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Silkscreen", cursive;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+}
+
+a {
+  background: linear-gradient(
+      to right,
+      rgba(200, 200, 200, 1),
+      rgba(200, 200, 200, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+    );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+/* Presentational Styles */
+body {
+  display: grid;
+  font-family: "Poppins", sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  height: 100vh;
+  place-items: center;
+}
+
+/* a {
+  box-shadow: inset 0 0 0 0 black;
+  color: #54b3d6;
+  padding: 0 0.25rem;
+  margin: 0 -0.25rem;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+a:hover {
+  color: #fff;
+  box-shadow: inset 200px 0 0 0 black;
+}
+
+/* Presentational styles */
+/* a {
+  color: white;
+  font-family: 'Silkscreen', cursive;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  font-family: 'Silkscreen', cursive;
+} */
+h1 {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+div {
+  font-size: 0px;
+  display: inline-block;
+  text-align: center;
+}
+.box {
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  vertical-align: top;
+  height: 225px;
+  width: 225px;
+  border: 0px solid black;
+  margin: 0 auto;
+  display: inline-block;
+  overflow: hidden;
+}
+.bar {
+  width: 100%;
+  height: 175px;
+  background: gold;
+  margin-top: 0px;
+  padding: 10px;
+  position: relative;
+}
+.img {
+  margin-top: 15px;
+  width: 150px;
+  height: 150px;
+}
+#first {
+  background-color: orange;
+}
+#second {
+  background-color: green;
+}
+#third {
+  background-color: blue;
+}
+#fourth {
+  background-color: red;
+}
+#fifth {
+  background-color: yellow;
+}
+#sixth {
+  background-color: purple;
+}
+
+.gallery {
+  --s: 150px; /* control the size */
+  --g: 10px; /* control the gap */
+  display: grid;
+  margin: calc(var(--s) + var(--g));
+}
+
+.gallery > img {
+  grid-area: 1/1;
+  width: var(--s);
+  aspect-ratio: 1.15;
+  object-fit: cover;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+  transform: translate(var(--_x, 0), var(--_y, 0)) scale(var(--_t, 1));
+  cursor: pointer;
+  filter: grayscale(10%);
+  transition: 0.2s linear;
+}
+.gallery > img:hover {
+  filter: grayscale(0);
+  z-index: 1;
+  --_t: 1.2;
+}
+
+.gallery > img:nth-child(1) {
+  --_y: calc(-100% - var(--g));
+}
+.gallery > img:nth-child(7) {
+  --_y: calc(100% + var(--g));
+}
+.gallery > img:nth-child(3),
+.gallery > img:nth-child(5) {
+  --_x: calc(-75% - 0.87 * var(--g));
+}
+.gallery > img:nth-child(4),
+.gallery > img:nth-child(6) {
+  --_x: calc(75% + 0.87 * var(--g));
+}
+.gallery > img:nth-child(3),
+.gallery > img:nth-child(4) {
+  --_y: calc(-50% - 0.5 * var(--g));
+}
+.gallery > img:nth-child(5),
+.gallery > img:nth-child(6) {
+  --_y: calc(50% + 0.5 * var(--g));
+}
+
+.circle img {
+  transition: 1s ease;
+}
+
+.circle img:hover {
+  border-radius: 50%;
+  transition: 1s ease;
+}
